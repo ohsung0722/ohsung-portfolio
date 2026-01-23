@@ -1,7 +1,7 @@
 export const theme = {
   colors: {
-    bg: "#ffffff",
-    text: "#111111",
+    bg: "#100e1a",
+    text: "#ffffff",
     muted: "#666666",
     border: "rgba(0,0,0,0.12)",
     cardBg: "#ffffff",
