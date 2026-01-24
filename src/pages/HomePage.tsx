@@ -34,7 +34,7 @@ export function HomePage() {
             subtitle="개발 실력과 소통 능력을 모두 갖춘 ‘누구나 함께 일하고 싶은 개발자’가 되기 위해 노력하고 있습니다. | 
             성능 최적화와 클린 코드에 대해 고민하고, 다양한 매체와 기술 블로그를 통해 프로젝트에 적용하는 과정을 즐깁니다."
             avatarSrc={avatar}
-            ctaLabel="VIEW MORE DETAIL PDF"
+            ctaLabel="Development Notes (PORTFOLIO)"
             onCtaClick={() => {
               console.log("CTA clicked");
             }}

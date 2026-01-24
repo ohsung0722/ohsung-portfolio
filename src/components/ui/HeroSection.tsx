@@ -46,7 +46,7 @@ export function HeroSection({
             <Actions>
               <CtaButton
                 as="a"
-                href="/Portfolio.pdf"
+                href="https://diamond-okapi-4ee.notion.site/17d71c4080a380668a83d469e40c93ff?source=copy_link"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -3,12 +3,39 @@ import styled from "styled-components";
 import { ImagePreviewModal } from "./ImagePreviewModal.tsx";
 import { ActivityTimeline, type TimelineItem } from "./ActivityTimeline.tsx";
 
+// ✅ Images (alias @ 사용)
+import enImg from "@/assets/images/en.jpeg";
+
+import img2023_1 from "@/assets/images/2023_1.jpeg";
+import img2023_2 from "@/assets/images/2023_2.png";
+import img2023_3 from "@/assets/images/2023_3.jpeg";
+import img2023_4 from "@/assets/images/2023_4.jpeg";
+import img2023_5 from "@/assets/images/2023_5.jpeg";
+
+import img2024_1 from "@/assets/images/2024_1.jpeg";
+import img2024_2 from "@/assets/images/2024_2.jpeg";
+import img2024_3 from "@/assets/images/2024_3.jpeg";
+import img2024_4 from "@/assets/images/2024_4.jpeg";
+
+import bmkpImg from "@/assets/images/bmkp.png";
+
+import img2025_1 from "@/assets/images/2025_1.jpg";
+import img2025_2 from "@/assets/images/2025_2.png";
+import img2025_3 from "@/assets/images/2025_3.png";
+import img2025_4 from "@/assets/images/2025_4.png";
+
 export default function ActivitySection() {
+  const [preview, setPreview] = React.useState<{
+    src: string;
+    alt?: string;
+  } | null>(null);
+
   const items: TimelineItem[] = [
     {
       year: "2023",
       content: [
         <ActivityContent
+          key="2023-h1"
           title="First Half of 2023"
           description={
             <>
@@ -31,10 +58,11 @@ export default function ActivitySection() {
               </StudyLinkWrap>
             </>
           }
-          images={[{ src: "/en.jpeg", alt: "2025 activity 1" }]}
+          images={[{ src: enImg, alt: "En# 활동" }]}
           onImageClick={(img) => setPreview(img)}
         />,
         <ActivityContent
+          key="2023-h2"
           title="Second Half of 2023"
           description={
             <>
@@ -63,11 +91,11 @@ export default function ActivitySection() {
             </>
           }
           images={[
-            { src: "/2023_2.png", alt: "2025 activity 2" },
-            { src: "/2023_3.jpeg", alt: "2025 activity 3" },
-            { src: "/2023_1.jpeg", alt: "2025 activity 1" },
-            { src: "/2023_4.jpeg", alt: "2025 activity 4" },
-            { src: "/2023_5.jpeg", alt: "2025 activity 5" },
+            { src: img2023_2, alt: "2023 activity 2" },
+            { src: img2023_3, alt: "2023 activity 3" },
+            { src: img2023_1, alt: "2023 activity 1" },
+            { src: img2023_4, alt: "2023 activity 4" },
+            { src: img2023_5, alt: "2023 activity 5" },
           ]}
           onImageClick={(img) => setPreview(img)}
         />,
@@ -77,6 +105,7 @@ export default function ActivitySection() {
       year: "2024",
       content: [
         <ActivityContent
+          key="2024-community"
           title="Community"
           description={
             <>
@@ -93,14 +122,15 @@ export default function ActivitySection() {
             </>
           }
           images={[
-            { src: "/2024_1.jpeg", alt: "2024 activity 1" },
-            { src: "/2024_2.jpeg", alt: "2024 activity 1" },
-            { src: "/2024_3.jpeg", alt: "2024 activity 1" },
-            { src: "/2024_4.jpeg", alt: "2024 activity 1" },
+            { src: img2024_1, alt: "2024 activity 1" },
+            { src: img2024_2, alt: "2024 activity 2" },
+            { src: img2024_3, alt: "2024 activity 3" },
+            { src: img2024_4, alt: "2024 activity 4" },
           ]}
           onImageClick={(img) => setPreview(img)}
         />,
         <ActivityContent
+          key="2024-dev"
           title="Development"
           description={
             <>
@@ -119,7 +149,7 @@ export default function ActivitySection() {
               협업과 커뮤니케이션을 직접 경험할 수 있었습니다.
             </>
           }
-          images={[{ src: "/bmkp.png", alt: "2025 activity 1" }]}
+          images={[{ src: bmkpImg, alt: "BMKP" }]}
           onImageClick={(img) => setPreview(img)}
         />,
       ],
@@ -128,6 +158,7 @@ export default function ActivitySection() {
       year: "2025",
       content: [
         <ActivityContent
+          key="2025-ssoc"
           title="SSOC 실 서비스 개발"
           description={
             <>
@@ -175,21 +206,16 @@ export default function ActivitySection() {
             </>
           }
           images={[
-            { src: "/2025_1.jpg", alt: "2025 activity 1" },
-            { src: "/2025_2.png", alt: "2025 activity 1" },
-            { src: "/2025_3.png", alt: "2025 activity 1" },
-            { src: "/2025_4.png", alt: "2025 activity 1" },
+            { src: img2025_1, alt: "2025 activity 1" },
+            { src: img2025_2, alt: "2025 activity 2" },
+            { src: img2025_3, alt: "2025 activity 3" },
+            { src: img2025_4, alt: "2025 activity 4" },
           ]}
           onImageClick={(img) => setPreview(img)}
         />,
       ],
     },
   ];
-
-  const [preview, setPreview] = React.useState<{
-    src: string;
-    alt?: string;
-  } | null>(null);
 
   return (
     <Section id="activity">
