@@ -3,6 +3,7 @@ import avatar from "../assets/avatar.jpeg";
 import { HeroSection } from "../components/ui/HeroSection";
 import { IntroTransition } from "../components/ui/IntroTransition";
 import { ProjectSection } from "../components/ui/ProjectSection";
+import ActivitySection from "../components/ui/ActivitySection";
 
 export function HomePage() {
   const [introState, setIntroState] = React.useState<
@@ -39,6 +40,7 @@ export function HomePage() {
             }}
           />
           <ProjectSection />
+          <ActivitySection />
         </div>
       )}
 
