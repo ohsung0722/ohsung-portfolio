@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { ActivityTimeline, type TimelineItem } from "./ActivityTimeLine.tsx";
 import { ImagePreviewModal } from "./ImagePreviewModal.tsx";
+import { ActivityTimeline, type TimelineItem } from "./ActivityTimeline.tsx";
 
 export default function ActivitySection() {
   const items: TimelineItem[] = [
