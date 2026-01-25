@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 type DashedRingProps = {
-  size?: number;
   strokeWidth?: number;
   rotateDuration?: number;
   flowDuration?: number;
@@ -9,13 +8,13 @@ type DashedRingProps = {
 };
 
 export function DashedRing({
-  size = 560,
   strokeWidth = 8,
   rotateDuration = 90,
   flowDuration = 140,
   className,
 }: DashedRingProps) {
-  const r = (size - strokeWidth) / 2;
+  const VIEW_SIZE = 1000; // 🔑 내부 좌표계 기준
+  const r = (VIEW_SIZE - strokeWidth) / 2;
   const c = 2 * Math.PI * r;
 
   const dashArray =
@@ -24,10 +23,10 @@ export function DashedRing({
   return (
     <motion.svg
       className={className}
-      width={size}
-      height={size}
-      viewBox={`0 0 ${size} ${size}`}
-      style={{ overflow: "visible" }}
+      viewBox={`0 0 ${VIEW_SIZE} ${VIEW_SIZE}`}
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid meet" // ⭐ 중심 고정
       animate={{ rotate: 360 }}
       transition={{
         repeat: Infinity,
@@ -46,8 +45,8 @@ export function DashedRing({
       </defs>
 
       <motion.circle
-        cx={size / 2}
-        cy={size / 2}
+        cx={VIEW_SIZE / 2}
+        cy={VIEW_SIZE / 2}
         r={r}
         fill="none"
         stroke="rgba(0,255,163,0.95)"

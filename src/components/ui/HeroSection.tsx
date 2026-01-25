@@ -82,7 +82,6 @@ export function HeroSection({
             <Ring>
               <DashedRing
                 className="neonRing"
-                size={560}
                 strokeWidth={8}
                 rotateDuration={90}
               />
@@ -354,8 +353,11 @@ const Ring = styled.div`
 
   .neonRing {
     position: absolute;
-    inset: -18px; /* 링을 바깥으로 살짝 키우기 (이미지처럼) */
+    inset: 0; /* 링을 바깥으로 살짝 키우기 (이미지처럼) */
     pointer-events: none;
+
+    transform: scale(1.08); /* ✅ 여기 */
+    transform-origin: center;
   }
 `;
 

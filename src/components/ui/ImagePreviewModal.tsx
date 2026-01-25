@@ -62,7 +62,7 @@ const Modal = styled.div`
 
 const ImageFrame = styled.div`
   width: 100%;
-  height: 800px;
+  height: min(80vh, 800px);
 
   display: flex;
   align-items: center;

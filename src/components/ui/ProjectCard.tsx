@@ -656,11 +656,7 @@ const Modal = styled(motion.div)`
   max-height: calc(100vh - 80px);
   border-radius: 22px;
 
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.06),
-    rgba(255, 255, 255, 0.03)
-  );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75));
 
   box-shadow:
     0 30px 80px rgba(0, 0, 0, 0.75),
