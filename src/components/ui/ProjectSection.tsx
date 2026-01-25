@@ -102,7 +102,7 @@ const PROJECTS: Project[] = [
     ],
     href: "https://github.com/ohsung0722/fakeCall",
     ctaLabel: "Github",
-    tech: ["js", "react", "axios", "tailwind", "sass", "mui"],
+    tech: ["js"],
     devLogHref:
       "https://diamond-okapi-4ee.notion.site/FakeCall-2f271c4080a3808d8985c8bff1a820bd?source=copy_link",
   },
